@@ -20,11 +20,11 @@
 		document.getElementById("jojo").innerHTML = mijnvar;
 		alert(mijnvar);
 	}	
-	function vakjeVullen(){
-		var deDOM = document.getElementsByTagName("html");
-		console.log(deDOM);
-		alert(deDOM[0].baseURI);
+	function vakjeVullen(vakId){
+		var elem = document.getElementById(vakId);
+		elem.bgColor = 'red';
 	}
+	
 </script>
 
 Geef uw naam:
@@ -35,12 +35,12 @@ Welkom: <b id="jojo" onclick="proberen()" >een stuk tekst</b>
 
 <table>
 	<tr>
-		<td id="A1" onclick="vakjeVullen()"></td>
-		<td id="B1"></td>	
+		<td id="A1" onclick="vakjeVullen(id)"></td>
+		<td id="B1" onclick="vakjeVullen(id)"></td>	
 	</tr>
 	<tr>
-		<td id="A2"></td>
-		<td id="B2"></td>	
+		<td id="A2" onclick="vakjeVullen(id)"></td>
+		<td id="B2" onclick="vakjeVullen(id)"></td>	
 	</tr>
 	
 </table>
