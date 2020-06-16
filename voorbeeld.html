@@ -4,6 +4,12 @@
 		background-color : red;
 		font-size: 22px;
 	}
+
+	td{
+		border: 2px solid blue;
+		width: 30px;
+		height: 30px;
+	}
 </style>
 
 <!-- javascript -->
@@ -14,21 +20,28 @@
 		document.getElementById("jojo").innerHTML = mijnvar;
 		alert(mijnvar);
 	}	
+	function vakjeVullen(){
+		var deDOM = document.getElementsByTagName("html");
+		console.log(deDOM);
+		alert(deDOM[0].baseURI);
+	}
 </script>
 
 Geef uw naam:
 <input type=text id="denaam" > 
 <input type=button value="Klik maar" onclick=proberen() > 
 
+Welkom: <b id="jojo" onclick="proberen()" >een stuk tekst</b>
 
-<hr>
-<hr>
-<hr>
+<table>
+	<tr>
+		<td id="A1" onclick="vakjeVullen()"></td>
+		<td id="B1"></td>	
+	</tr>
+	<tr>
+		<td id="A2"></td>
+		<td id="B2"></td>	
+	</tr>
+	
+</table>
 
-
-hoi
-
-
-<b id="jojo" onclick="proberen()" >een stuk tekst</b>
-
-<textarea cols="44"  rows="15">Stukjes tekst </textarea>
