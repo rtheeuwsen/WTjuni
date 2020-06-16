@@ -1,3 +1,34 @@
+<!-- CSS -->
+<style>
+	b{ 
+		background-color : red;
+		font-size: 22px;
+	}
+</style>
+
+<!-- javascript -->
+
+<script>
+	function proberen(){
+		var mijnvar = document.getElementById("denaam").value;
+		document.getElementById("jojo").innerHTML = mijnvar;
+		alert(mijnvar);
+	}	
+</script>
+
+Geef uw naam:
+<input type=text id="denaam" > 
+<input type=button value="Klik maar" onclick=proberen() > 
+
+
+<hr>
+<hr>
+<hr>
+
+
 hoi
 
-nog meer woorden
+
+<b id="jojo" onclick="proberen()" >een stuk tekst</b>
+
+<textarea cols="44"  rows="15">Stukjes tekst </textarea>
