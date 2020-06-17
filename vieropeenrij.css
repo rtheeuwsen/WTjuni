@@ -1,0 +1,26 @@
+
+ table {
+    overflow: hidden;
+    z-index: 1;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 10px solid blue;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+}
+
+td:hover::after { 
+    background-color: aqua;
+    content: '\00a0';
+    height: 10000px;    
+    left: 0;
+    position: absolute;
+    top: -5000px;
+    width: 100%;
+    z-index: -1;        
+}
