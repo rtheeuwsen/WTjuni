@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style>
+            td {
+                width: 50px;
+                height: 50px;
+                border: grey solid 2px;
+            }
+        </style>
+        <script>
+            
+            function start(){
+
+                var status = [0,1,2,0,0,2];
+
+                for(var s = 0 ; s < status.length ; s++){
+
+                        var vakjeId = "vakje"+s;
+                        console.log(vakjeId);
+
+                        if(status[s] == 1) {
+                           var elem = document.getElementById(vakjeId);
+                           elem.bgColor = 'red';
+                        }
+                        if(status[s] == 2) {
+                            var elem = document.getElementById(vakjeId);
+                            elem.bgColor = 'yellow';
+                        }
+            }
+        
+        }
+
+        </script>
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <td id="vakje0"></td>
+                <td id="vakje1"></td>
+                <td id="vakje2"></td>
+                <td id="vakje3"></td>
+                <td id="vakje4"></td>
+                <td id="vakje5"></td>                
+            </tr>
+        </table>
+        <input type="button" onclick="start()" value="Klik mij">
+    </body>
+
+</html>
