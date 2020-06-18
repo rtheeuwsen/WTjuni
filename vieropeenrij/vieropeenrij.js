@@ -9,7 +9,7 @@ function vakKleuren(vakId){
     var x=vakId[4];
 
 
-        for(var y = 2 ; y > -1 ; y--) {
+        for(var y = 5 ; y > -1 ; y--) {
         
             var vakId = "vak"+y+x; 
             var elem = document.getElementById(vakId);
@@ -27,12 +27,7 @@ function vakKleuren(vakId){
                 
                 break;
 
-                console.log(46)
-                console.log(elem.bgColor);
             }
-
-
-
 
         }
         
