@@ -1,5 +1,8 @@
-function start(vakId){  
 
+var player = true;
+
+
+function vakKleuren(vakId){  
     
     
     console.log(vakId[4]);
@@ -12,8 +15,16 @@ function start(vakId){
             var elem = document.getElementById(vakId);
             
             console.log(vakId)
-            if (elem.bgColor !== "red") {
-                elem.bgColor = 'red';
+            if (elem.bgColor !== "red" && elem.bgColor !== "yellow" ) {
+                if (player == true) {
+                   elem.bgColor = 'red'; 
+                   player = false;
+                }
+                else {
+                    elem.bgColor = 'yellow';
+                    player = true;
+                }
+                
                 break;
 
                 console.log(46)
@@ -26,13 +37,3 @@ function start(vakId){
         }
         
     }
-
-
-
-
-
-           
-
-var elem = document.getElementById(vakId);
-            elem.bgColor = 'red';
-    console.log(vakId);
