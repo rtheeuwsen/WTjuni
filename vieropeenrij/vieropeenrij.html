@@ -10,9 +10,30 @@
 <body>
     <h1>Vier op een rij</h1>
     <p>
-        <input type="button" onclick="spelBord()" value="Start">
+        Naam: <input type="text" placeholder="Speler1" id="speler1">
+        <label for="kleur1">Kies een kleur:</label>
+            <select name="kleur1" id="kleur1">
+                <option value="red">Rood</option>
+                <option value="orange">Oranje</option>
+                <option value="purple">Paars</option>
+                <option value="grey">Grijs</option>
+            </select> <br>      
+        Naam: <input type="text" placeholder="Speler2" id="speler2"> 
+        <label for="kleur2">Kies een kleur:</label>
+        <select name="kleur2" id="kleur2">
+            <option value="yellow">Geel</option>
+            <option value="black">Zwart</option>
+            <option value="pink">Roze</option>
+            <option value="green">Groen</option>
+        </select>   
     </p>
-
+    <p>
+        <input type="submit" value="Start!" onclick="spelerSubmit()">
+    </p>
+    <p>
+        Speler aan de beurt: <div id="spelerBeurt"></div>
+    </p>
+    
     <table>
         <tr>
             <td id="vak00" onclick="vakKleuren(id)"></td>
@@ -69,6 +90,10 @@
             <td id="vak56" onclick="vakKleuren(id)"></td>
         </tr> 
     </table>
+
+    <p>
+        <input type="button" onclick="reset()" value="Reset">
+    </p>
 </body>
 
 </html>
